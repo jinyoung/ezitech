@@ -60,7 +60,7 @@
 </template>
 
 <script>
-    import File from '../vo/File.vue';
+    import File from '../File.vue';
 
     export default {
         name: 'FileManager',

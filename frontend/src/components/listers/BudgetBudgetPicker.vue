@@ -18,9 +18,6 @@
                                 TaskManagementNumber :  {{item.taskManagementNumber }}
                             </v-list-item-subtitle>
                             <v-list-item-subtitle>
-                                StudentResearchCost :  {{item.studentResearchCost }}
-                            </v-list-item-subtitle>
-                            <v-list-item-subtitle>
                                 PrivateRatio :  {{item.privateRatio }}
                             </v-list-item-subtitle>
                             <v-list-item-subtitle>
@@ -34,9 +31,6 @@
                             </v-list-item-subtitle>
                             <v-list-item-subtitle>
                                 ExternalLaborCost :  {{item.externalLaborCost }}
-                            </v-list-item-subtitle>
-                            <v-list-item-subtitle>
-                                StudentResearchCost :  {{item.studentResearchCost }}
                             </v-list-item-subtitle>
                             <v-list-item-subtitle>
                                 MaterialCost :  {{item.materialCost }}
@@ -104,10 +98,6 @@
                 if(val != undefined) {
                     var arr = this.list[val]._links.self.href.split('/');
                     obj['taskManagementNumber'] = arr[4]; 
-                    
-                    
-                    
-                    
                     
                     
                     

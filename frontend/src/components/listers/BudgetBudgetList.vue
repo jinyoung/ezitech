@@ -51,19 +51,15 @@
                             
                             
                             
-                            
-                            
                         </v-list-item-title>
 
                         <v-list-item-subtitle style="font-size:25px; font-weight:700;">
                             [ TaskManagementNumber :  {{data.taskManagementNumber }} ] &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                            [ StudentResearchCost :  {{data.studentResearchCost }} ] &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
                             [ PrivateRatio :  {{data.privateRatio }} ] &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
                             [ PrivateCashRatio :  {{data.privateCashRatio }} ] &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
                             [ LaborCost :  {{data.laborCost }} ] &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
                             [ InternalLaborCost :  {{data.internalLaborCost }} ] &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
                             [ ExternalLaborCost :  {{data.externalLaborCost }} ] &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                            [ StudentResearchCost :  {{data.studentResearchCost }} ] &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
                             [ MaterialCost :  {{data.materialCost }} ] &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
                             [ ResearchFacilityCost :  {{data.researchFacilityCost }} ] &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
                             [ ActivityCost :  {{data.activityCost }} ] &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
@@ -137,13 +133,11 @@
             
             this.newValue = {
                 'taskManagementNumber': '',
-                'studentResearchCost': {},
                 'privateRatio': 0,
                 'privateCashRatio': 0,
                 'laborCost': {},
                 'internalLaborCost': {},
                 'externalLaborCost': {},
-                'studentResearchCost': {},
                 'materialCost': '',
                 'researchFacilityCost': '',
                 'activityCost': '',

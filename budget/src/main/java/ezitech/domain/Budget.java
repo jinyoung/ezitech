@@ -1,8 +1,6 @@
 package ezitech.domain;
 
 import ezitech.BudgetApplication;
-import ezitech.domain.BudgetCreated;
-import ezitech.domain.BudgetDeleted;
 import java.time.LocalDate;
 import java.util.Date;
 import java.util.List;
@@ -18,9 +16,6 @@ public class Budget {
     @Id
     private String taskManagementNumber;
 
-    @Embedded
-    private Money studentResearchCost;
-
     private Double privateRatio;
 
     private Double privateCashRatio;
@@ -34,9 +29,6 @@ public class Budget {
     @Embedded
     private Money externalLaborCost;
 
-    @Embedded
-    private Money studentResearchCost;
-
     private MaterialCost materialCost;
 
     private ResearchFacilityCost researchFacilityCost;
@@ -47,18 +39,6 @@ public class Budget {
 
     @Embedded
     private ProjectMasterId projectMasterId;
-
-    @PostPersist
-    public void onPostPersist() {
-        BudgetCreated budgetCreated = new BudgetCreated(this);
-        budgetCreated.publishAfterCommit();
-
-        BudgetDeleted budgetDeleted = new BudgetDeleted(this);
-        budgetDeleted.publishAfterCommit();
-    }
-
-    @PrePersist
-    public void onPrePersist() {}
 
     public static BudgetRepository repository() {
         BudgetRepository budgetRepository = BudgetApplication.applicationContext.getBean(

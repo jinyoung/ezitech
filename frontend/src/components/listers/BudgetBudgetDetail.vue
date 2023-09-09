@@ -8,7 +8,6 @@
             <div>
                 <String label="TaskManagementNumber" v-model="item.taskManagementNumber" :editMode="editMode" @change="change" />
             </div>
-            <Money offline label="StudentResearchCost" v-model="item.studentResearchCost" :editMode="false" @change="change" />
             <div>
                 <Number label="PrivateRatio" v-model="item.privateRatio" :editMode="editMode" @change="change" />
             </div>
@@ -18,7 +17,6 @@
             <Money offline label="LaborCost" v-model="item.laborCost" :editMode="false" @change="change" />
             <Money offline label="InternalLaborCost" v-model="item.internalLaborCost" :editMode="false" @change="change" />
             <Money offline label="ExternalLaborCost" v-model="item.externalLaborCost" :editMode="false" @change="change" />
-            <Money offline label="StudentResearchCost" v-model="item.studentResearchCost" :editMode="false" @change="change" />
             <MaterialCost offline label="MaterialCost" v-model="item.materialCost" :editMode="false" :key="false" @change="change" />
             <ResearchFacilityCost offline label="ResearchFacilityCost" v-model="item.researchFacilityCost" :editMode="false" :key="false" @change="change" />
             <ActivityCost offline label="ActivityCost" v-model="item.activityCost" :editMode="false" :key="false" @change="change" />

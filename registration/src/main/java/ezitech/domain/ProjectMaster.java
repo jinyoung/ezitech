@@ -1,8 +1,6 @@
 package ezitech.domain;
 
 import ezitech.RegistrationApplication;
-import ezitech.domain.ProjectCreated;
-import ezitech.domain.ProjectDeleted;
 import java.time.LocalDate;
 import java.util.Date;
 import java.util.List;
@@ -57,18 +55,6 @@ public class ProjectMaster {
     private File projectPlanFile;
 
     private ParticipationType participationType;
-
-    @PostPersist
-    public void onPostPersist() {
-        ProjectCreated projectCreated = new ProjectCreated(this);
-        projectCreated.publishAfterCommit();
-
-        ProjectDeleted projectDeleted = new ProjectDeleted(this);
-        projectDeleted.publishAfterCommit();
-    }
-
-    @PrePersist
-    public void onPrePersist() {}
 
     public static ProjectMasterRepository repository() {
         ProjectMasterRepository projectMasterRepository = RegistrationApplication.applicationContext.getBean(
