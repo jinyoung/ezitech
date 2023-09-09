@@ -5,9 +5,6 @@ import org.springframework.data.repository.PagingAndSortingRepository;
 import org.springframework.data.rest.core.annotation.RepositoryRestResource;
 
 //<<< PoEAA / Repository
-@RepositoryRestResource(
-    collectionResourceRel = "researchers",
-    path = "researchers"
-)
-public interface ResearcherRepository
-    extends PagingAndSortingRepository<Researcher, String> {}
+@RepositoryRestResource(collectionResourceRel="researchers", path="researchers")
+public interface ResearcherRepository extends PagingAndSortingRepository<Researcher, >{
+}

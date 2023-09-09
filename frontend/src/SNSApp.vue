@@ -36,6 +36,17 @@
                 <v-list>
                     <v-list-item
                         class="px-2"
+                        key=""
+                        to="//"
+                        @click="changeUrl()"
+                        color="primary"
+                        style="font-weight:700;"
+                    >
+                        
+                    </v-list-item>
+
+                    <v-list-item
+                        class="px-2"
                         key="projectMasters"
                         to="/registrations/projectMasters"
                         @click="changeUrl()"
@@ -51,6 +62,17 @@
 
                     <v-list-item
                         class="px-2"
+                        key=""
+                        to="//"
+                        @click="changeUrl()"
+                        color="primary"
+                        style="font-weight:700;"
+                    >
+                        
+                    </v-list-item>
+
+                    <v-list-item
+                        class="px-2"
                         key="budgets"
                         to="/budgets/budgets"
                         @click="changeUrl()"
@@ -60,6 +82,17 @@
                         예산
                     </v-list-item>
 
+
+                    <v-list-item
+                        class="px-2"
+                        key=""
+                        to="//"
+                        @click="changeUrl()"
+                        color="primary"
+                        style="font-weight:700;"
+                    >
+                        
+                    </v-list-item>
 
                     <v-list-item
                         class="px-2"
@@ -152,6 +185,13 @@ export default {
         ImageUrl: '',
         aggregate: [
             { 
+                title: '', 
+                description: '', 
+                key: '', 
+                route: '//',
+                ImageUrl: '',
+            },
+            { 
                 title: '과제 마스터', 
                 description: '과제 마스터에 대한 설명', 
                 key: 'projectMasters', 
@@ -159,10 +199,24 @@ export default {
                 ImageUrl: '',
             },
             { 
+                title: '', 
+                description: '', 
+                key: '', 
+                route: '//',
+                ImageUrl: '',
+            },
+            { 
                 title: '예산', 
                 description: '', 
                 key: 'budgets', 
                 route: '/budgets/budgets',
+                ImageUrl: '',
+            },
+            { 
+                title: '', 
+                description: '', 
+                key: '', 
+                route: '//',
                 ImageUrl: '',
             },
             { 

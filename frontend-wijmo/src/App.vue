@@ -123,6 +123,7 @@ export default {
         menus: [
             { id: 'registration', title: '과제등록',
                 items: [
+                    { key: '', url: '/', name: '' },
                     { key: 'projectMasters', url: '/projectMasters', name: '과제 마스터' },
                 ]
             },
@@ -140,23 +141,37 @@ export default {
             },
             { id: 'budget', title: '예산',
                 items: [
+                    { key: '', url: '/', name: '' },
                     { key: 'budgets', url: '/budgets', name: '예산' },
                 ]
             },
             { id: 'participationRate', title: 'ParticipationRate',
                 items: [
+                    { key: '', url: '/', name: '' },
                     { key: 'researchers', url: '/researchers', name: '참여연구원' },
                 ]
             },
         ],
         cards: [
             {
+                text: "",
+                link: "/",
+            },
+            {
                 text: "과제 마스터",
                 link: "/projectMasters",
             },
             {
+                text: "",
+                link: "/",
+            },
+            {
                 text: "예산",
                 link: "/budgets",
+            },
+            {
+                text: "",
+                link: "/",
             },
             {
                 text: "참여연구원",

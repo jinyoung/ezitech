@@ -37,6 +37,7 @@ mvn spring-boot:run
 ## Test by API
 - registration
 ```
+ http :8088/ 
  http :8088/projectMasters projectId="projectId" noticeProjectName="noticeProjectName" projectManager="projectManager" projectName="projectName" rfpName="rfpName" researchManager="researchManager" cashBurden="cashBurden" materialBurden="materialBurden" totalProjectCost="totalProjectCost" currentYearProjectCost="currentYearProjectCost" totalProjectDuration="totalProjectDuration" currentYearDuration="currentYearDuration" organName="organName" organBusinessNumber="organBusinessNumber" organDirector="organDirector" receiptDate="receiptDate" selectionNotification="selectionNotification" accountAllocation="accountAllocation" projectPlanFile="projectPlanFile" participationType="participationType" 
 ```
 - 집행
@@ -50,10 +51,12 @@ mvn spring-boot:run
 ```
 - budget
 ```
- http :8088/budgets taskManagementNumber="taskManagementNumber" studentResearchCost="studentResearchCost" privateRatio="privateRatio" privateCashRatio="privateCashRatio" laborCost="laborCost" internalLaborCost="internalLaborCost" externalLaborCost="externalLaborCost" studentResearchCost="studentResearchCost" materialCost="materialCost" researchFacilityCost="researchFacilityCost" activityCost="activityCost" indirectCost="indirectCost" projectMasterId="projectMasterId" 
+ http :8088/ 
+ http :8088/budgets taskManagementNumber="taskManagementNumber" privateRatio="privateRatio" privateCashRatio="privateCashRatio" laborCost="laborCost" internalLaborCost="internalLaborCost" externalLaborCost="externalLaborCost" materialCost="materialCost" researchFacilityCost="researchFacilityCost" activityCost="activityCost" indirectCost="indirectCost" projectMasterId="projectMasterId" 
 ```
 - ParticipationRate
 ```
+ http :8088/ 
  http :8088/researchers name="name" role="role" residentId="residentId" phoneNumber="phoneNumber" highestEducation="highestEducation" highestEducationSchool="highestEducationSchool" highestEducationMajor="highestEducationMajor" monthlySalary="monthlySalary" physicalAllowanceRate="physicalAllowanceRate" cashAllowanceRate="cashAllowanceRate" duration="duration" department="department" researcherNumber="researcherNumber" projectMasterId="projectMasterId" 
 ```
 

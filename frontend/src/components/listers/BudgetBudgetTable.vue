@@ -67,13 +67,11 @@
             headers: 
                 [
                     { text: "taskManagementNumber", value: "taskManagementNumber" },
-                    { text: "studentResearchCost", value: "studentResearchCost" },
                     { text: "privateRatio", value: "privateRatio" },
                     { text: "privateCashRatio", value: "privateCashRatio" },
                     { text: "laborCost", value: "laborCost" },
                     { text: "internalLaborCost", value: "internalLaborCost" },
                     { text: "externalLaborCost", value: "externalLaborCost" },
-                    { text: "studentResearchCost", value: "studentResearchCost" },
                     { text: "materialCost", value: "materialCost" },
                     { text: "researchFacilityCost", value: "researchFacilityCost" },
                     { text: "activityCost", value: "activityCost" },
@@ -97,13 +95,11 @@
 
             this.newValue = {
                 'taskManagementNumber': '',
-                'studentResearchCost': {},
                 'privateRatio': 0,
                 'privateCashRatio': 0,
                 'laborCost': {},
                 'internalLaborCost': {},
                 'externalLaborCost': {},
-                'studentResearchCost': {},
                 'materialCost': '',
                 'researchFacilityCost': '',
                 'activityCost': '',

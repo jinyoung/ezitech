@@ -18,6 +18,9 @@ import org.springframework.stereotype.Service;
 public class PolicyHandler {
 
     @Autowired
+    Repository Repository;
+
+    @Autowired
     BudgetRepository budgetRepository;
 
     @StreamListener(KafkaProcessor.INPUT)
