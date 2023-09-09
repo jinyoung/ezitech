@@ -123,46 +123,6 @@ spec:
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: rnd-notes
-  labels:
-    app: rnd-notes
-spec:
-  replicas: 1
-  selector:
-    matchLabels:
-      app: rnd-notes
-  template:
-    metadata:
-      labels:
-        app: rnd-notes
-    spec:
-      containers:
-        - name: rnd-notes
-          image: username/rnd-notes:latest
-          ports:
-            - containerPort: 8080
-          readinessProbe:
-            httpGet:
-              path: '/actuator/health'
-              port: 8080
-            initialDelaySeconds: 10
-            timeoutSeconds: 2
-            periodSeconds: 5
-            failureThreshold: 10
-          livenessProbe:
-            httpGet:
-              path: '/actuator/health'
-              port: 8080
-            initialDelaySeconds: 120
-            timeoutSeconds: 2
-            periodSeconds: 5
-            failureThreshold: 5
-
----
-
-apiVersion: apps/v1
-kind: Deployment
-metadata:
   name: budget
   labels:
     app: budget
@@ -219,6 +179,46 @@ spec:
       containers:
         - name: ParticipationRate
           image: username/ParticipationRate:latest
+          ports:
+            - containerPort: 8080
+          readinessProbe:
+            httpGet:
+              path: '/actuator/health'
+              port: 8080
+            initialDelaySeconds: 10
+            timeoutSeconds: 2
+            periodSeconds: 5
+            failureThreshold: 10
+          livenessProbe:
+            httpGet:
+              path: '/actuator/health'
+              port: 8080
+            initialDelaySeconds: 120
+            timeoutSeconds: 2
+            periodSeconds: 5
+            failureThreshold: 5
+
+---
+
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: 연구노트
+  labels:
+    app: 연구노트
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: 연구노트
+  template:
+    metadata:
+      labels:
+        app: 연구노트
+    spec:
+      containers:
+        - name: 연구노트
+          image: username/연구노트:latest
           ports:
             - containerPort: 8080
           readinessProbe:
@@ -296,23 +296,6 @@ spec:
 apiVersion: v1
 kind: Service
 metadata:
-  name: rnd-notes
-  labels:
-    app: rnd-notes
-spec:
-  ports:
-    - port: 8080
-      targetPort: 8080
-  selector:
-    app: rnd-notes
-
-
----
-
-
-apiVersion: v1
-kind: Service
-metadata:
   name: budget
   labels:
     app: budget
@@ -339,4 +322,21 @@ spec:
       targetPort: 8080
   selector:
     app: ParticipationRate
+
+
+---
+
+
+apiVersion: v1
+kind: Service
+metadata:
+  name: 연구노트
+  labels:
+    app: 연구노트
+spec:
+  ports:
+    - port: 8080
+      targetPort: 8080
+  selector:
+    app: 연구노트
 

@@ -129,14 +129,13 @@ export default {
             },
             { id: '집행', title: '집행',
                 items: [
+                    { key: 'expenseResolutions', url: '/expenseResolutions', name: '결의' },
                 ]
             },
             { id: '정산', title: '정산',
                 items: [
-                ]
-            },
-            { id: 'rndNotes', title: '연구노트',
-                items: [
+                    { key: 'projects', url: '/projects', name: '과제' },
+                    { key: 'expenseTables', url: '/expenseTables', name: '예실대비표' },
                 ]
             },
             { id: 'budget', title: '예산',
@@ -151,6 +150,11 @@ export default {
                     { key: 'researchers', url: '/researchers', name: '참여연구원' },
                 ]
             },
+            { id: '연구노트', title: '연구노트',
+                items: [
+                    { key: 'researchNotes', url: '/researchNotes', name: '연구노트' },
+                ]
+            },
         ],
         cards: [
             {
@@ -160,6 +164,18 @@ export default {
             {
                 text: "과제 마스터",
                 link: "/projectMasters",
+            },
+            {
+                text: "결의",
+                link: "/expenseResolutions",
+            },
+            {
+                text: "과제",
+                link: "/projects",
+            },
+            {
+                text: "예실대비표",
+                link: "/expenseTables",
             },
             {
                 text: "",
@@ -176,6 +192,10 @@ export default {
             {
                 text: "참여연구원",
                 link: "/researchers",
+            },
+            {
+                text: "연구노트",
+                link: "/researchNotes",
             },
         ],
         activeMenu: null

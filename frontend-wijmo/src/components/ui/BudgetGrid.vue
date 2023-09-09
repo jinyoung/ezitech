@@ -45,25 +45,10 @@
             style="margin-top:10px; max-height:65vh;"
             class="wj-felx-grid"
         >
-            <wj-flex-grid-filter :filterColumns="['RowHeader','privateRatio','privateCashRatio','laborCost','internalLaborCost','externalLaborCost','materialCost','researchFacilityCost','activityCost','indirectCost','projectMasterId',]" />
+            <wj-flex-grid-filter :filterColumns="['RowHeader','privateRatio','privateCashRatio','materialCost','researchFacilityCost','activityCost','indirectCost','projectMasterId',]" />
             <wj-flex-grid-cell-template cellType="RowHeader" v-slot="cell">{{cell.row.index + 1}}</wj-flex-grid-cell-template>
             <wj-flex-grid-column binding="privateRatio" header="민간부담율" width="2*" :isReadOnly="true" align="center" />
             <wj-flex-grid-column binding="privateCashRatio" header="민간현금부담율" width="2*" :isReadOnly="true" align="center" />
-            <wj-flex-grid-column binding="laborCost" header="인건비" width="2*" :isReadOnly="true" align="center">
-                <wj-flex-grid-cell-template cellType="Cell" v-slot="cell">   
-                    <Money v-model="cell.item.laborCost" :editMode="editMode"></Money>
-                </wj-flex-grid-cell-template>
-            </wj-flex-grid-column>
-            <wj-flex-grid-column binding="internalLaborCost" header="내부 인건비" width="2*" :isReadOnly="true" align="center">
-                <wj-flex-grid-cell-template cellType="Cell" v-slot="cell">   
-                    <Money v-model="cell.item.internalLaborCost" :editMode="editMode"></Money>
-                </wj-flex-grid-cell-template>
-            </wj-flex-grid-column>
-            <wj-flex-grid-column binding="externalLaborCost" header="외부 인건비" width="2*" :isReadOnly="true" align="center">
-                <wj-flex-grid-cell-template cellType="Cell" v-slot="cell">   
-                    <Money v-model="cell.item.externalLaborCost" :editMode="editMode"></Money>
-                </wj-flex-grid-cell-template>
-            </wj-flex-grid-column>
             <wj-flex-grid-column binding="materialCost" header="재료비" width="2*" :isReadOnly="true" align="center" />
             <wj-flex-grid-column binding="researchFacilityCost" header="연구시설장비비" width="2*" :isReadOnly="true" align="center" />
             <wj-flex-grid-column binding="activityCost" header="활동비" width="2*" :isReadOnly="true" align="center" />
@@ -152,9 +137,6 @@ export default {
                         'taskManagementNumber': '',
                         'privateRatio': 0,
                         'privateCashRatio': 0,
-                        'laborCost': {},
-                        'internalLaborCost': {},
-                        'externalLaborCost': {},
                         'materialCost': {},
                         'researchFacilityCost': {},
                         'activityCost': {},

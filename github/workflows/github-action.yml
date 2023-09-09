@@ -32,9 +32,9 @@ jobs:
           mvn clean package -f ./registration/pom.xml
           mvn clean package -f ./집행/pom.xml
           mvn clean package -f ./정산/pom.xml
-          mvn clean package -f ./rnd-notes/pom.xml
           mvn clean package -f ./budget/pom.xml
           mvn clean package -f ./ParticipationRate/pom.xml
+          mvn clean package -f ./연구노트/pom.xml
 
       - name: Docker Build and push for Registration
         uses: docker/build-push-action@v4
@@ -66,16 +66,6 @@ jobs:
             ghcr.io/${{ github.repository }}/정산:latest
             ghcr.io/${{ github.repository }}/정산:${{ github.ref_name }}
             
-      - name: Docker Build and push for RndNotes
-        uses: docker/build-push-action@v4
-        with:
-          context: ./rnd-notes
-          platforms: linux/amd64,linux/arm64
-          push: true
-          tags: |
-            ghcr.io/${{ github.repository }}/rnd-notes:latest
-            ghcr.io/${{ github.repository }}/rnd-notes:${{ github.ref_name }}
-            
       - name: Docker Build and push for Budget
         uses: docker/build-push-action@v4
         with:
@@ -95,4 +85,14 @@ jobs:
           tags: |
             ghcr.io/${{ github.repository }}/participationrate:latest
             ghcr.io/${{ github.repository }}/participationrate:${{ github.ref_name }}
+            
+      - name: Docker Build and push for 연구노트
+        uses: docker/build-push-action@v4
+        with:
+          context: ./연구노트
+          platforms: linux/amd64,linux/arm64
+          push: true
+          tags: |
+            ghcr.io/${{ github.repository }}/연구노트:latest
+            ghcr.io/${{ github.repository }}/연구노트:${{ github.ref_name }}
             
