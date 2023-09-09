@@ -18,7 +18,7 @@
                                 TaskManagementNumber :  {{item.taskManagementNumber }}
                             </v-list-item-subtitle>
                             <v-list-item-subtitle>
-                                GovernmentSupportAmount :  {{item.governmentSupportAmount }}
+                                StudentResearchCost :  {{item.studentResearchCost }}
                             </v-list-item-subtitle>
                             <v-list-item-subtitle>
                                 PrivateRatio :  {{item.privateRatio }}

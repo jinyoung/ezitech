@@ -116,7 +116,7 @@
                 'highestEducation': '',
                 'highestEducationSchool': '',
                 'highestEducationMajor': '',
-                'monthlySalary': '',
+                'monthlySalary': {},
                 'physicalAllowanceRate': 0,
                 'cashAllowanceRate': 0,
                 'duration': 0,

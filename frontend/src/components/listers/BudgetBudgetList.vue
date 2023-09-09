@@ -57,7 +57,7 @@
 
                         <v-list-item-subtitle style="font-size:25px; font-weight:700;">
                             [ TaskManagementNumber :  {{data.taskManagementNumber }} ] &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                            [ GovernmentSupportAmount :  {{data.governmentSupportAmount }} ] &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                            [ StudentResearchCost :  {{data.studentResearchCost }} ] &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
                             [ PrivateRatio :  {{data.privateRatio }} ] &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
                             [ PrivateCashRatio :  {{data.privateCashRatio }} ] &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
                             [ LaborCost :  {{data.laborCost }} ] &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
@@ -137,13 +137,13 @@
             
             this.newValue = {
                 'taskManagementNumber': '',
-                'governmentSupportAmount': '',
+                'studentResearchCost': {},
                 'privateRatio': 0,
                 'privateCashRatio': 0,
-                'laborCost': '',
-                'internalLaborCost': '',
-                'externalLaborCost': '',
-                'studentResearchCost': '',
+                'laborCost': {},
+                'internalLaborCost': {},
+                'externalLaborCost': {},
+                'studentResearchCost': {},
                 'materialCost': '',
                 'researchFacilityCost': '',
                 'activityCost': '',

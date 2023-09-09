@@ -110,13 +110,13 @@
             
             me.newValue = {
                 'taskManagementNumber': '',
-                'governmentSupportAmount': '',
+                'studentResearchCost': {},
                 'privateRatio': 0,
                 'privateCashRatio': 0,
-                'laborCost': '',
-                'internalLaborCost': '',
-                'externalLaborCost': '',
-                'studentResearchCost': '',
+                'laborCost': {},
+                'internalLaborCost': {},
+                'externalLaborCost': {},
+                'studentResearchCost': {},
                 'materialCost': '',
                 'researchFacilityCost': '',
                 'activityCost': '',

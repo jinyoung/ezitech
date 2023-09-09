@@ -8,7 +8,7 @@
             <div>
                 <String label="TaskManagementNumber" v-model="item.taskManagementNumber" :editMode="editMode" @change="change" />
             </div>
-            <Money offline label="GovernmentSupportAmount" v-model="item.governmentSupportAmount" :editMode="false" @change="change" />
+            <Money offline label="StudentResearchCost" v-model="item.studentResearchCost" :editMode="false" @change="change" />
             <div>
                 <Number label="PrivateRatio" v-model="item.privateRatio" :editMode="editMode" @change="change" />
             </div>
