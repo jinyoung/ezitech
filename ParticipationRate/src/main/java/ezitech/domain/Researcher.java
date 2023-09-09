@@ -28,6 +28,7 @@ public class Researcher {
 
     private String highestEducationMajor;
 
+    @Embedded
     private Money monthlySalary;
 
     private Double physicalAllowanceRate;
@@ -40,6 +41,7 @@ public class Researcher {
 
     private String researcherNumber;
 
+    @Embedded
     private ProjectMasterId projectMasterId;
 
     public static ResearcherRepository repository() {

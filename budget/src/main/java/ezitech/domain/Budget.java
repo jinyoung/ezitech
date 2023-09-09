@@ -18,18 +18,23 @@ public class Budget {
     @Id
     private String taskManagementNumber;
 
-    private Money governmentSupportAmount;
+    @Embedded
+    private Money studentResearchCost;
 
     private Double privateRatio;
 
     private Double privateCashRatio;
 
+    @Embedded
     private Money laborCost;
 
+    @Embedded
     private Money internalLaborCost;
 
+    @Embedded
     private Money externalLaborCost;
 
+    @Embedded
     private Money studentResearchCost;
 
     private MaterialCost materialCost;
@@ -40,6 +45,7 @@ public class Budget {
 
     private IndirectCost indirectCost;
 
+    @Embedded
     private ProjectMasterId projectMasterId;
 
     @PostPersist

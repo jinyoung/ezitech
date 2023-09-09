@@ -50,7 +50,7 @@ mvn spring-boot:run
 ```
 - budget
 ```
- http :8088/budgets taskManagementNumber="taskManagementNumber" governmentSupportAmount="governmentSupportAmount" privateRatio="privateRatio" privateCashRatio="privateCashRatio" laborCost="laborCost" internalLaborCost="internalLaborCost" externalLaborCost="externalLaborCost" studentResearchCost="studentResearchCost" materialCost="materialCost" researchFacilityCost="researchFacilityCost" activityCost="activityCost" indirectCost="indirectCost" projectMasterId="projectMasterId" 
+ http :8088/budgets taskManagementNumber="taskManagementNumber" studentResearchCost="studentResearchCost" privateRatio="privateRatio" privateCashRatio="privateCashRatio" laborCost="laborCost" internalLaborCost="internalLaborCost" externalLaborCost="externalLaborCost" studentResearchCost="studentResearchCost" materialCost="materialCost" researchFacilityCost="researchFacilityCost" activityCost="activityCost" indirectCost="indirectCost" projectMasterId="projectMasterId" 
 ```
 - ParticipationRate
 ```

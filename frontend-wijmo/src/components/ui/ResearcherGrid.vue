@@ -44,7 +44,11 @@
             <wj-flex-grid-column binding="highestEducation" header="HighestEducation" width="2*" :isReadOnly="true" align="center" />
             <wj-flex-grid-column binding="highestEducationSchool" header="HighestEducationSchool" width="2*" :isReadOnly="true" align="center" />
             <wj-flex-grid-column binding="highestEducationMajor" header="HighestEducationMajor" width="2*" :isReadOnly="true" align="center" />
-            <wj-flex-grid-column binding="monthlySalary" header="MonthlySalary" width="2*" :isReadOnly="true" align="center" />
+            <wj-flex-grid-column binding="monthlySalary" header="MonthlySalary" width="2*" :isReadOnly="true" align="center">
+                <wj-flex-grid-cell-template cellType="Cell" v-slot="cell">   
+                    <Money v-model="cell.item.monthlySalary" :editMode="editMode"></Money>
+                </wj-flex-grid-cell-template>
+            </wj-flex-grid-column>
             <wj-flex-grid-column binding="physicalAllowanceRate" header="PhysicalAllowanceRate" width="2*" :isReadOnly="true" align="center" />
             <wj-flex-grid-column binding="cashAllowanceRate" header="CashAllowanceRate" width="2*" :isReadOnly="true" align="center" />
             <wj-flex-grid-column binding="duration" header="Duration" width="2*" :isReadOnly="true" align="center" />

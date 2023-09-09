@@ -17,7 +17,7 @@
 
         <v-card-text>
             <String v-if="editMode" label="과제관리번호" v-model="value.taskManagementNumber" :editMode="editMode" :inputUI="'TEXT'"/>
-            <Money offline label="정부지원금" v-model="value.governmentSupportAmount" :editMode="editMode" @change="change"/>
+            <Money offline label="정부지원금" v-model="value.studentResearchCost" :editMode="editMode" @change="change"/>
             <Number label="민간부담율" v-model="value.privateRatio" :editMode="editMode" :inputUI="'TEXT'"/>
             <Number label="민간현금부담율" v-model="value.privateCashRatio" :editMode="editMode" :inputUI="'TEXT'"/>
             <Money offline label="인건비" v-model="value.laborCost" :editMode="editMode" @change="change"/>

@@ -3,7 +3,7 @@
         <String label="과제관리번호" v-model="value.taskManagementNumber" :editMode="editMode"/>
         <Number label="민간부담율" v-model="value.privateRatio" :editMode="editMode"/>
         <Number label="민간현금부담율" v-model="value.privateCashRatio" :editMode="editMode"/>
-        <Money offline label="정부지원금" v-model="value.governmentSupportAmount" :editMode="editMode" @change="change"/>
+        <Money offline label="정부지원금" v-model="value.studentResearchCost" :editMode="editMode" @change="change"/>
         <Money offline label="인건비" v-model="value.laborCost" :editMode="editMode" @change="change"/>
         <Money offline label="내부 인건비" v-model="value.internalLaborCost" :editMode="editMode" @change="change"/>
         <Money offline label="외부 인건비" v-model="value.externalLaborCost" :editMode="editMode" @change="change"/>
