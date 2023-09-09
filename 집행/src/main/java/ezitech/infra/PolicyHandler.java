@@ -17,6 +17,9 @@ import org.springframework.stereotype.Service;
 @Transactional
 public class PolicyHandler {
 
+    @Autowired
+    ExpenseResolutionRepository expenseResolutionRepository;
+
     @StreamListener(KafkaProcessor.INPUT)
     public void whatever(@Payload String eventString) {}
 }

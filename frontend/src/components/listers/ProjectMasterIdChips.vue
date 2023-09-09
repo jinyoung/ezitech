@@ -59,7 +59,7 @@
 </template>
 
 <script>
-    import ProjectMasterId from '../vo/ProjectMasterId.vue';
+    import ProjectMasterId from '../ProjectMasterId.vue';
 
     export default {
         name: 'ProjectMasterIdManager',

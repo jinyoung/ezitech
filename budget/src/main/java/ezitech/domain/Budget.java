@@ -1,6 +1,7 @@
 package ezitech.domain;
 
 import ezitech.BudgetApplication;
+import java.math.BigDecimal;
 import java.time.LocalDate;
 import java.util.Date;
 import java.util.List;
@@ -20,22 +21,13 @@ public class Budget {
 
     private Double privateCashRatio;
 
-    @Embedded
-    private Money laborCost;
+    private BigDecimal materialCost;
 
-    @Embedded
-    private Money internalLaborCost;
+    private BigDecimal researchFacilityCost;
 
-    @Embedded
-    private Money externalLaborCost;
+    private BigDecimal activityCost;
 
-    private MaterialCost materialCost;
-
-    private ResearchFacilityCost researchFacilityCost;
-
-    private ActivityCost activityCost;
-
-    private IndirectCost indirectCost;
+    private BigDecimal indirectCost;
 
     @Embedded
     private ProjectMasterId projectMasterId;

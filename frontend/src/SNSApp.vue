@@ -57,7 +57,39 @@
                     </v-list-item>
 
 
+                    <v-list-item
+                        class="px-2"
+                        key="expenseResolutions"
+                        to="/집행/expenseResolutions"
+                        @click="changeUrl()"
+                        color="primary"
+                        style="font-weight:700;"
+                    >
+                        결의
+                    </v-list-item>
 
+
+                    <v-list-item
+                        class="px-2"
+                        key="projects"
+                        to="/정산/projects"
+                        @click="changeUrl()"
+                        color="primary"
+                        style="font-weight:700;"
+                    >
+                        과제
+                    </v-list-item>
+
+                    <v-list-item
+                        class="px-2"
+                        key="expenseTables"
+                        to="/정산/expenseTables"
+                        @click="changeUrl()"
+                        color="primary"
+                        style="font-weight:700;"
+                    >
+                        예실대비표
+                    </v-list-item>
 
 
                     <v-list-item
@@ -103,6 +135,18 @@
                         style="font-weight:700;"
                     >
                         참여연구원
+                    </v-list-item>
+
+
+                    <v-list-item
+                        class="px-2"
+                        key="researchNotes"
+                        to="/연구노트/researchNotes"
+                        @click="changeUrl()"
+                        color="primary"
+                        style="font-weight:700;"
+                    >
+                        연구노트
                     </v-list-item>
 
 
@@ -199,6 +243,27 @@ export default {
                 ImageUrl: '',
             },
             { 
+                title: '결의', 
+                description: '결의 정보를 관리하는 Aggregate', 
+                key: 'expenseResolutions', 
+                route: '/집행/expenseResolutions',
+                ImageUrl: '',
+            },
+            { 
+                title: '과제', 
+                description: '예산 관리를 위한 과제 정보', 
+                key: 'projects', 
+                route: '/정산/projects',
+                ImageUrl: '',
+            },
+            { 
+                title: '예실대비표', 
+                description: '과제별 예산 집행 정보', 
+                key: 'expenseTables', 
+                route: '/정산/expenseTables',
+                ImageUrl: '',
+            },
+            { 
                 title: '', 
                 description: '', 
                 key: '', 
@@ -224,6 +289,13 @@ export default {
                 description: '', 
                 key: 'researchers', 
                 route: '/participationRates/researchers',
+                ImageUrl: '',
+            },
+            { 
+                title: '연구노트', 
+                description: '', 
+                key: 'researchNotes', 
+                route: '/연구노트/researchNotes',
                 ImageUrl: '',
             },
             

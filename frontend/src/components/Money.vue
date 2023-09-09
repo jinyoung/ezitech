@@ -6,8 +6,6 @@
         </v-card-title>
 
         <v-card-text>
-            <Number label="Amount" v-model="value.amount" :editMode="editMode"/>
-            <String label="Currency" v-model="value.currency" :editMode="editMode"/>
         </v-card-text>
 
         <v-card-actions v-if="inList">
@@ -35,17 +33,9 @@
             if(!Object.values(this.value)[0]) {
                 this.$emit('input', {});
                 this.newValue = {
-                    'amount': '',
-                    'currency': '',
                 }
             }
             if(typeof this.value === 'object') {
-                if(!('amount' in this.value)) {
-                    this.value.amount = 0;
-                }
-                if(!('currency' in this.value)) {
-                    this.value.currency = '';
-                }
             }
         },
         watch: {

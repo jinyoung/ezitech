@@ -12,8 +12,6 @@
                     <v-list-item-content>
                         <v-list-item-title>Message {{idx+1}}</v-list-item-title>
                         <v-list-item-subtitle>
-                            Amount :  {{item.amount }} <br>
-                            Currency :  {{item.currency }} <br>
                         </v-list-item-subtitle>
                     </v-list-item-content>
                     <v-list-item-action v-if="editMode">
@@ -60,7 +58,7 @@
 </template>
 
 <script>
-    import Money from '../vo/Money.vue';
+    import Money from '../Money.vue';
 
     export default {
         name: 'MoneyManager',

@@ -23,9 +23,9 @@ See the README.md files inside the each microservices directory:
 - registration
 - 집행
 - 정산
-- rnd-notes
 - budget
 - ParticipationRate
+- 연구노트
 
 
 ## Run API Gateway (Spring Gateway)
@@ -42,22 +42,26 @@ mvn spring-boot:run
 ```
 - 집행
 ```
+ http :8088/expenseResolutions resolutionNumber="resolutionNumber" directOrIndirectExpense="directOrIndirectExpense" item="item" resolutionName="resolutionName" totalAmount="totalAmount" vendorName="vendorName" bankName="bankName" bankAccountNumber="bankAccountNumber" accountOwner="accountOwner" resolutionContent="resolutionContent" attachments="attachments" approvalStatus="approvalStatus" approvalLine="approvalLine" 
 ```
 - 정산
 ```
-```
-- rnd-notes
-```
+ http :8088/projects projectNumber="projectNumber" projectCode="projectCode" projectPeriod="projectPeriod" projectName="projectName" expenseTable="expenseTable" expenseTableId="expenseTableId" 
+ http :8088/expenseTables item="item" plannedBudget="plannedBudget" budgetChange="budgetChange" executionAmount="executionAmount" approvedExecutionAmount="approvedExecutionAmount" balance="balance" 
 ```
 - budget
 ```
  http :8088/ 
- http :8088/budgets taskManagementNumber="taskManagementNumber" privateRatio="privateRatio" privateCashRatio="privateCashRatio" laborCost="laborCost" internalLaborCost="internalLaborCost" externalLaborCost="externalLaborCost" materialCost="materialCost" researchFacilityCost="researchFacilityCost" activityCost="activityCost" indirectCost="indirectCost" projectMasterId="projectMasterId" 
+ http :8088/budgets taskManagementNumber="taskManagementNumber" privateRatio="privateRatio" privateCashRatio="privateCashRatio" materialCost="materialCost" researchFacilityCost="researchFacilityCost" activityCost="activityCost" indirectCost="indirectCost" projectMasterId="projectMasterId" 
 ```
 - ParticipationRate
 ```
  http :8088/ 
  http :8088/researchers name="name" role="role" residentId="residentId" phoneNumber="phoneNumber" highestEducation="highestEducation" highestEducationSchool="highestEducationSchool" highestEducationMajor="highestEducationMajor" monthlySalary="monthlySalary" physicalAllowanceRate="physicalAllowanceRate" cashAllowanceRate="cashAllowanceRate" duration="duration" department="department" researcherNumber="researcherNumber" projectMasterId="projectMasterId" 
+```
+- 연구노트
+```
+ http :8088/researchNotes researchNoteId="researchNoteId" date="date" author="author" content="content" signature="signature" approvalStatus="approvalStatus" 
 ```
 
 

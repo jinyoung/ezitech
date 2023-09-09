@@ -24,15 +24,6 @@
                                 PrivateCashRatio :  {{item.privateCashRatio }}
                             </v-list-item-subtitle>
                             <v-list-item-subtitle>
-                                LaborCost :  {{item.laborCost }}
-                            </v-list-item-subtitle>
-                            <v-list-item-subtitle>
-                                InternalLaborCost :  {{item.internalLaborCost }}
-                            </v-list-item-subtitle>
-                            <v-list-item-subtitle>
-                                ExternalLaborCost :  {{item.externalLaborCost }}
-                            </v-list-item-subtitle>
-                            <v-list-item-subtitle>
                                 MaterialCost :  {{item.materialCost }}
                             </v-list-item-subtitle>
                             <v-list-item-subtitle>
@@ -98,12 +89,6 @@
                 if(val != undefined) {
                     var arr = this.list[val]._links.self.href.split('/');
                     obj['taskManagementNumber'] = arr[4]; 
-                    
-                    
-                    
-                    
-                    
-                    
                     
                     
                     

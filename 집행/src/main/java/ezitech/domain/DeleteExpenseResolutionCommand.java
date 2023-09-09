@@ -1,0 +1,11 @@
+package ezitech.domain;
+
+import java.time.LocalDate;
+import java.util.*;
+import lombok.Data;
+
+@Data
+public class DeleteExpenseResolutionCommand {
+
+    private String resolutionNumber;
+}
