@@ -12,9 +12,10 @@
                         size="70"
                         class="border-color"
                     >
+                        <span class="material-symbols-outlined" style="font-size:60px; color:#9575CD;">icon_name</span>
                     </v-list-item-avatar>
                     <h1 class="align-self-center ml-3">예산</h1>
-                    <div class="secondary-text-color" style="margin-left:30px;"></div>
+                    <div class="secondary-text-color" style="margin-left:30px;">예산에 대한 설명</div>
                 </v-list-item>
             </v-row>
         </v-card>
@@ -109,14 +110,19 @@
             me.values = temp.data._embedded.budgets;
             
             me.newValue = {
-                'taskManagementNumber': '',
-                'privateRatio': 0,
-                'privateCashRatio': 0,
-                'materialCost': '',
-                'researchFacilityCost': '',
-                'activityCost': '',
-                'indirectCost': '',
+                'issueManagementNumber': '',
+                'privateBurdenRate': 0,
+                'privateCashBurdenRate': 0,
+                'studentResearchExpenses': {},
+                'internalPersonnelExpenses': {},
+                'externalPersonnelExpenses': {},
+                'studentResearchExpenses': {},
+                'materialExpenses': '',
+                'researchFacilityExpenses': '',
+                'activityExpenses': '',
                 'projectMasterId': {},
+                'governmentSupportFunds': {},
+                'personnelExpenses': {},
             }
         },
         methods:{

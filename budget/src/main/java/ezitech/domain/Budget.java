@@ -1,11 +1,12 @@
 package ezitech.domain;
 
 import ezitech.BudgetApplication;
-import java.math.BigDecimal;
+import ezitech.domain.BudgetCreated;
+import ezitech.domain.BudgetDeleted;
+import jakarta.persistence.*;
 import java.time.LocalDate;
 import java.util.Date;
 import java.util.List;
-import javax.persistence.*;
 import lombok.Data;
 
 @Entity
@@ -15,22 +16,50 @@ import lombok.Data;
 public class Budget {
 
     @Id
-    private String taskManagementNumber;
+    private String issueManagementNumber;
 
-    private Double privateRatio;
+    private Double privateBurdenRate;
 
-    private Double privateCashRatio;
+    private Double privateCashBurdenRate;
 
-    private BigDecimal materialCost;
+    @Embedded
+    private Money studentResearchExpenses;
 
-    private BigDecimal researchFacilityCost;
+    @Embedded
+    private Money internalPersonnelExpenses;
 
-    private BigDecimal activityCost;
+    @Embedded
+    private Money externalPersonnelExpenses;
 
-    private BigDecimal indirectCost;
+    @Embedded
+    private Money studentResearchExpenses;
+
+    private MaterialExpenses materialExpenses;
+
+    private ResearchFacilityExpenses researchFacilityExpenses;
+
+    private ActivityExpenses activityExpenses;
 
     @Embedded
     private ProjectMasterId projectMasterId;
+
+    @Embedded
+    private Money governmentSupportFunds;
+
+    @Embedded
+    private Money personnelExpenses;
+
+    @PostPersist
+    public void onPostPersist() {
+        BudgetCreated budgetCreated = new BudgetCreated(this);
+        budgetCreated.publishAfterCommit();
+
+        BudgetDeleted budgetDeleted = new BudgetDeleted(this);
+        budgetDeleted.publishAfterCommit();
+    }
+
+    @PrePersist
+    public void onPrePersist() {}
 
     public static BudgetRepository repository() {
         BudgetRepository budgetRepository = BudgetApplication.applicationContext.getBean(

@@ -15,28 +15,43 @@
                             <v-list-item-title>
                             </v-list-item-title>
                             <v-list-item-subtitle>
-                                TaskManagementNumber :  {{item.taskManagementNumber }}
+                                IssueManagementNumber :  {{item.issueManagementNumber }}
                             </v-list-item-subtitle>
                             <v-list-item-subtitle>
-                                PrivateRatio :  {{item.privateRatio }}
+                                PrivateBurdenRate :  {{item.privateBurdenRate }}
                             </v-list-item-subtitle>
                             <v-list-item-subtitle>
-                                PrivateCashRatio :  {{item.privateCashRatio }}
+                                PrivateCashBurdenRate :  {{item.privateCashBurdenRate }}
                             </v-list-item-subtitle>
                             <v-list-item-subtitle>
-                                MaterialCost :  {{item.materialCost }}
+                                StudentResearchExpenses :  {{item.studentResearchExpenses }}
                             </v-list-item-subtitle>
                             <v-list-item-subtitle>
-                                ResearchFacilityCost :  {{item.researchFacilityCost }}
+                                InternalPersonnelExpenses :  {{item.internalPersonnelExpenses }}
                             </v-list-item-subtitle>
                             <v-list-item-subtitle>
-                                ActivityCost :  {{item.activityCost }}
+                                ExternalPersonnelExpenses :  {{item.externalPersonnelExpenses }}
                             </v-list-item-subtitle>
                             <v-list-item-subtitle>
-                                IndirectCost :  {{item.indirectCost }}
+                                StudentResearchExpenses :  {{item.studentResearchExpenses }}
+                            </v-list-item-subtitle>
+                            <v-list-item-subtitle>
+                                MaterialExpenses :  {{item.materialExpenses }}
+                            </v-list-item-subtitle>
+                            <v-list-item-subtitle>
+                                ResearchFacilityExpenses :  {{item.researchFacilityExpenses }}
+                            </v-list-item-subtitle>
+                            <v-list-item-subtitle>
+                                ActivityExpenses :  {{item.activityExpenses }}
                             </v-list-item-subtitle>
                             <v-list-item-subtitle>
                                 ProjectMasterId :  {{item.projectMasterId }}
+                            </v-list-item-subtitle>
+                            <v-list-item-subtitle>
+                                GovernmentSupportFunds :  {{item.governmentSupportFunds }}
+                            </v-list-item-subtitle>
+                            <v-list-item-subtitle>
+                                PersonnelExpenses :  {{item.personnelExpenses }}
                             </v-list-item-subtitle>
                         </v-list-item-content>
 
@@ -88,7 +103,17 @@
                 var obj = {}
                 if(val != undefined) {
                     var arr = this.list[val]._links.self.href.split('/');
-                    obj['taskManagementNumber'] = arr[4]; 
+                    obj['issueManagementNumber'] = arr[4]; 
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
                     
                     
                     

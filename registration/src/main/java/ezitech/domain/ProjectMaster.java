@@ -1,10 +1,12 @@
 package ezitech.domain;
 
 import ezitech.RegistrationApplication;
+import ezitech.domain.ProjectCreated;
+import ezitech.domain.ProjectDeleted;
+import jakarta.persistence.*;
 import java.time.LocalDate;
 import java.util.Date;
 import java.util.List;
-import javax.persistence.*;
 import lombok.Data;
 
 @Entity
@@ -56,6 +58,18 @@ public class ProjectMaster {
 
     private ParticipationType participationType;
 
+    @PostPersist
+    public void onPostPersist() {
+        ProjectCreated projectCreated = new ProjectCreated(this);
+        projectCreated.publishAfterCommit();
+
+        ProjectDeleted projectDeleted = new ProjectDeleted(this);
+        projectDeleted.publishAfterCommit();
+    }
+
+    @PrePersist
+    public void onPrePersist() {}
+
     public static ProjectMasterRepository repository() {
         ProjectMasterRepository projectMasterRepository = RegistrationApplication.applicationContext.getBean(
             ProjectMasterRepository.class
@@ -69,6 +83,35 @@ public class ProjectMaster {
 
         ProjectUpdated projectUpdated = new ProjectUpdated(this);
         projectUpdated.publishAfterCommit();
+    }
+
+    //>>> Clean Arch / Port Method
+
+    //<<< Clean Arch / Port Method
+    public static void updateProject(BudgetCreated budgetCreated) {
+        //implement business logic here:
+
+        /** Example 1:  new item 
+        ProjectMaster projectMaster = new ProjectMaster();
+        repository().save(projectMaster);
+
+        ProjectUpdated projectUpdated = new ProjectUpdated(projectMaster);
+        projectUpdated.publishAfterCommit();
+        */
+
+        /** Example 2:  finding and process
+        
+        repository().findById(budgetCreated.get???()).ifPresent(projectMaster->{
+            
+            projectMaster // do something
+            repository().save(projectMaster);
+
+            ProjectUpdated projectUpdated = new ProjectUpdated(projectMaster);
+            projectUpdated.publishAfterCommit();
+
+         });
+        */
+
     }
     //>>> Clean Arch / Port Method
 

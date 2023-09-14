@@ -5,8 +5,6 @@ import Router from 'vue-router'
 Vue.use(Router);
 
 
-import Manager from "./components/listers/Cards"
-import Detail from "./components/listers/Detail"
 import RegistrationProjectMasterManager from "./components/listers/RegistrationProjectMasterCards"
 import RegistrationProjectMasterDetail from "./components/listers/RegistrationProjectMasterDetail"
 
@@ -18,15 +16,11 @@ import 정산ProjectDetail from "./components/listers/정산ProjectDetail"
 import 정산ExpenseTableManager from "./components/listers/정산ExpenseTableTable"
 import 정산ExpenseTableDetail from "./components/listers/정산ExpenseTableDetail"
 
-import Manager from "./components/listers/Cards"
-import Detail from "./components/listers/Detail"
 import BudgetBudgetManager from "./components/listers/BudgetBudgetCards"
 import BudgetBudgetDetail from "./components/listers/BudgetBudgetDetail"
 
-import Manager from "./components/listers/Cards"
-import Detail from "./components/listers/Detail"
-import ParticipationRateResearcherManager from "./components/listers/ParticipationRateResearcherCards"
-import ParticipationRateResearcherDetail from "./components/listers/ParticipationRateResearcherDetail"
+import ParticipationRateInHireCostManager from "./components/listers/ParticipationRateInHireCostCards"
+import ParticipationRateInHireCostDetail from "./components/listers/ParticipationRateInHireCostDetail"
 
 import 연구노트ResearchNoteManager from "./components/listers/연구노트ResearchNoteCards"
 import 연구노트ResearchNoteDetail from "./components/listers/연구노트ResearchNoteDetail"
@@ -36,16 +30,6 @@ export default new Router({
     // mode: 'history',
     base: process.env.BASE_URL,
     routes: [
-            {
-                path: '//',
-                name: 'Manager',
-                component: Manager
-            },
-            {
-                path: '///:id',
-                name: 'Detail',
-                component: Detail
-            },
             {
                 path: '/registrations/projectMasters',
                 name: 'RegistrationProjectMasterManager',
@@ -90,16 +74,6 @@ export default new Router({
             },
 
             {
-                path: '//',
-                name: 'Manager',
-                component: Manager
-            },
-            {
-                path: '///:id',
-                name: 'Detail',
-                component: Detail
-            },
-            {
                 path: '/budgets/budgets',
                 name: 'BudgetBudgetManager',
                 component: BudgetBudgetManager
@@ -111,24 +85,14 @@ export default new Router({
             },
 
             {
-                path: '//',
-                name: 'Manager',
-                component: Manager
+                path: '/participationRates/inHireCosts',
+                name: 'ParticipationRateInHireCostManager',
+                component: ParticipationRateInHireCostManager
             },
             {
-                path: '///:id',
-                name: 'Detail',
-                component: Detail
-            },
-            {
-                path: '/participationRates/researchers',
-                name: 'ParticipationRateResearcherManager',
-                component: ParticipationRateResearcherManager
-            },
-            {
-                path: '/participationRates/researchers/:id',
-                name: 'ParticipationRateResearcherDetail',
-                component: ParticipationRateResearcherDetail
+                path: '/participationRates/inHireCosts/:id',
+                name: 'ParticipationRateInHireCostDetail',
+                component: ParticipationRateInHireCostDetail
             },
 
             {

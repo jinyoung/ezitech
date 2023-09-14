@@ -15,7 +15,6 @@
             <String label="BankAccountNumber" v-model="value.bankAccountNumber" :editMode="editMode"/>
             <String label="AccountOwner" v-model="value.accountOwner" :editMode="editMode"/>
             <String label="ResolutionContent" v-model="value.resolutionContent" :editMode="editMode"/>
-            <List&lt;File&gt; offline label="Attachments" v-model="value.attachments" :editMode="editMode" @change="change"/>
             <FileList offline label="Attachments" v-model="value.attachments" :editMode="editMode" @change="change"/>
             <String label="ApprovalStatus" v-model="value.approvalStatus" :editMode="editMode"/>
             <String label="ApprovalLine" v-model="value.approvalLine" :editMode="editMode"/>

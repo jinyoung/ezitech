@@ -26,7 +26,6 @@
             <String label="은행계좌번호" v-model="value.bankAccountNumber" :editMode="editMode" :inputUI="'TEXT'"/>
             <String label="예금주" v-model="value.accountOwner" :editMode="editMode" :inputUI="'TEXT'"/>
             <String label="결의내용" v-model="value.resolutionContent" :editMode="editMode" :inputUI="'TEXTAREA'"/>
-            <List&lt;File&gt; offline label="붙임파일" v-model="value.attachments" :editMode="editMode" @change="change"/>
             <FileManager offline label="붙임파일" v-model="value.attachments" :editMode="editMode" @change="change"/>
             <String label="결재상태" v-model="value.approvalStatus" :editMode="editMode" :inputUI="'TEXT'"/>
             <String label="결재선" v-model="value.approvalLine" :editMode="editMode" :inputUI="'TEXT'"/>

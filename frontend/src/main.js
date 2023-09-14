@@ -45,7 +45,6 @@ templateFiles.keys().forEach(function(tempFiles) {
 Vue.use(Managing);
 const pluralCaseList = []
 
-pluralCaseList.push( {plural: "/", pascal: ""} )
 pluralCaseList.push( {plural: "registrations/projectMasters", pascal: "RegistrationProjectMaster"} )
 
 pluralCaseList.push( {plural: "집행/expenseResolutions", pascal: "집행ExpenseResolution"} )
@@ -53,11 +52,9 @@ pluralCaseList.push( {plural: "집행/expenseResolutions", pascal: "집행Expens
 pluralCaseList.push( {plural: "정산/projects", pascal: "정산Project"} )
 pluralCaseList.push( {plural: "정산/expenseTables", pascal: "정산ExpenseTable"} )
 
-pluralCaseList.push( {plural: "/", pascal: ""} )
 pluralCaseList.push( {plural: "budgets/budgets", pascal: "BudgetBudget"} )
 
-pluralCaseList.push( {plural: "/", pascal: ""} )
-pluralCaseList.push( {plural: "participationRates/researchers", pascal: "ParticipationRateResearcher"} )
+pluralCaseList.push( {plural: "participationRates/inHireCosts", pascal: "ParticipationRateInHireCost"} )
 
 pluralCaseList.push( {plural: "연구노트/researchNotes", pascal: "연구노트ResearchNote"} )
 

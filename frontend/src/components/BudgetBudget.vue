@@ -16,14 +16,19 @@
         </v-card-title >        
 
         <v-card-text>
-            <String v-if="editMode" label="과제관리번호" v-model="value.taskManagementNumber" :editMode="editMode" :inputUI="'TEXT'"/>
-            <Number label="민간부담율" v-model="value.privateRatio" :editMode="editMode" :inputUI="'TEXT'"/>
-            <Number label="민간현금부담율" v-model="value.privateCashRatio" :editMode="editMode" :inputUI="'TEXT'"/>
-            <BigDecimal offline label="재료비" v-model="value.materialCost" :editMode="editMode" @change="change"/>
-            <BigDecimal offline label="연구시설장비비" v-model="value.researchFacilityCost" :editMode="editMode" @change="change"/>
-            <BigDecimal offline label="활동비" v-model="value.activityCost" :editMode="editMode" @change="change"/>
-            <BigDecimal offline label="간접비" v-model="value.indirectCost" :editMode="editMode" @change="change"/>
+            <String v-if="editMode" label="과제관리번호" v-model="value.issueManagementNumber" :editMode="editMode" :inputUI="'TEXT'"/>
+            <Number label="민간부담율" v-model="value.privateBurdenRate" :editMode="editMode" :inputUI="'TEXT'"/>
+            <Number label="민간현금부담율" v-model="value.privateCashBurdenRate" :editMode="editMode" :inputUI="'TEXT'"/>
+            <Money offline label="인건비" v-model="value.studentResearchExpenses" :editMode="editMode" @change="change"/>
+            <Money offline label="내부 인건비" v-model="value.internalPersonnelExpenses" :editMode="editMode" @change="change"/>
+            <Money offline label="외부 인건비" v-model="value.externalPersonnelExpenses" :editMode="editMode" @change="change"/>
+            <Money offline label="학생 연구비" v-model="value.studentResearchExpenses" :editMode="editMode" @change="change"/>
+            <MaterialExpenses offline label="재료비" v-model="value.materialExpenses" :editMode="editMode" @change="change"/>
+            <ResearchFacilityExpenses offline label="연구시설장비비" v-model="value.researchFacilityExpenses" :editMode="editMode" @change="change"/>
+            <ActivityExpenses offline label="활동비" v-model="value.activityExpenses" :editMode="editMode" @change="change"/>
             <ProjectMasterId offline label="ProjectMasterId" v-model="value.projectMasterId" :editMode="editMode" @change="change"/>
+            <Money offline label="GovernmentSupportFunds" v-model="value.governmentSupportFunds" :editMode="editMode" @change="change"/>
+            <Money offline label="PersonnelExpenses" v-model="value.personnelExpenses" :editMode="editMode" @change="change"/>
         </v-card-text>
 
         <v-card-actions>
@@ -105,10 +110,22 @@
 <script>
     const axios = require('axios').default;
 
+    import Money from './vo/Money.vue';
+    import Money from './vo/Money.vue';
+    import Money from './vo/Money.vue';
+    import Money from './vo/Money.vue';
+    import Money from './vo/Money.vue';
+    import Money from './vo/Money.vue';
 
     export default {
         name: 'BudgetBudget',
         components:{
+            Money,
+            Money,
+            Money,
+            Money,
+            Money,
+            Money,
         },
         props: {
             value: [Object, String, Number, Boolean, Array],

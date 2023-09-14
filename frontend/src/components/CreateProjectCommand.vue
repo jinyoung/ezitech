@@ -74,7 +74,7 @@
             this.value.organName = '';
             this.value.organBusinessNumber = '';
             this.value.organDirector = '';
-            this.value.receiptDate = '2023-09-09';
+            this.value.receiptDate = '2023-09-14';
             this.value.selectionNotification = false;
             this.value.accountAllocation = false;
             this.value.projectPlanFile = {};

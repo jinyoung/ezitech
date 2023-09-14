@@ -31,7 +31,7 @@
             <String label="주관 기관명" v-model="value.organName" :editMode="editMode" :inputUI="'TEXT'"/>
             <String label="주관 기관 사업자 번호" v-model="value.organBusinessNumber" :editMode="editMode" :inputUI="'TEXT'"/>
             <String label="주관 기관 총 책임자" v-model="value.organDirector" :editMode="editMode" :inputUI="'TEXT'"/>
-            <Date label="접수일" v-model="value.receiptDate" :editMode="editMode" :inputUI="'TEXT'"/>
+            <Date label="접수일" v-model="value.receiptDate" :editMode="editMode" :inputUI="''"/>
             <Boolean label="선정 통보 완료 여부" v-model="value.selectionNotification" :editMode="editMode" :inputUI="'SELECT'"/>
             <Boolean label="계정 부여 여부" v-model="value.accountAllocation" :editMode="editMode" :inputUI="'SELECT'"/>
             <File offline label="사업 계획서 파일" v-model="value.projectPlanFile" :editMode="editMode" @change="change"/>

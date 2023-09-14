@@ -118,7 +118,7 @@
                 'organName': '',
                 'organBusinessNumber': '',
                 'organDirector': '',
-                'receiptDate': '2023-09-09',
+                'receiptDate': '2023-09-14',
                 'selectionNotification': false,
                 'accountAllocation': false,
                 'projectPlanFile': {},

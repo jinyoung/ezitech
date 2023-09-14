@@ -4,9 +4,9 @@ import com.fasterxml.jackson.databind.DeserializationFeature;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import ezitech.config.kafka.KafkaProcessor;
 import ezitech.domain.*;
+import jakarta.transaction.Transactional;
 import javax.naming.NameParser;
 import javax.naming.NameParser;
-import javax.transaction.Transactional;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.cloud.stream.annotation.StreamListener;
 import org.springframework.messaging.handler.annotation.Payload;
@@ -18,12 +18,25 @@ import org.springframework.stereotype.Service;
 public class PolicyHandler {
 
     @Autowired
-    Repository Repository;
-
-    @Autowired
     ProjectMasterRepository projectMasterRepository;
 
     @StreamListener(KafkaProcessor.INPUT)
     public void whatever(@Payload String eventString) {}
+
+    @StreamListener(
+        value = KafkaProcessor.INPUT,
+        condition = "headers['type']=='BudgetCreated'"
+    )
+    public void wheneverBudgetCreated_UpdateProject(
+        @Payload BudgetCreated budgetCreated
+    ) {
+        BudgetCreated event = budgetCreated;
+        System.out.println(
+            "\n\n##### listener UpdateProject : " + budgetCreated + "\n\n"
+        );
+
+        // Sample Logic //
+        ProjectMaster.updateProject(event);
+    }
 }
 //>>> Clean Arch / Inbound Adaptor

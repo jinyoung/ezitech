@@ -12,25 +12,25 @@ spring:
         - id: registration
           uri: http://localhost:8082
           predicates:
-            - Path=/undefined/**, /projectMasters/**, 
+            - Path=/projectMasters/**, 
         - id: 집행
-          uri: http://localhost:0
+          uri: http://localhost:8083
           predicates:
             - Path=/expenseResolutions/**, 
         - id: 정산
-          uri: http://localhost:0
+          uri: http://localhost:8084
           predicates:
             - Path=/projects/**, /expenseTables/**, 
         - id: budget
-          uri: http://localhost:0
+          uri: http://localhost:8085
           predicates:
-            - Path=/undefined/**, /budgets/**, 
+            - Path=/budgets/**, 
         - id: ParticipationRate
-          uri: http://localhost:0
+          uri: http://localhost:8086
           predicates:
-            - Path=/undefined/**, /researchers/**, 
+            - Path=/inHireCosts/**, 
         - id: 연구노트
-          uri: http://localhost:0
+          uri: http://localhost:8087
           predicates:
             - Path=/researchNotes/**, 
         - id: frontend
@@ -60,7 +60,7 @@ spring:
         - id: registration
           uri: http://registration:8080
           predicates:
-            - Path=/undefined/**, /projectMasters/**, 
+            - Path=/projectMasters/**, 
         - id: 집행
           uri: http://집행:8080
           predicates:
@@ -72,11 +72,11 @@ spring:
         - id: budget
           uri: http://budget:8080
           predicates:
-            - Path=/undefined/**, /budgets/**, 
+            - Path=/budgets/**, 
         - id: ParticipationRate
           uri: http://participationRate:8080
           predicates:
-            - Path=/undefined/**, /researchers/**, 
+            - Path=/inHireCosts/**, 
         - id: 연구노트
           uri: http://연구노트:8080
           predicates:

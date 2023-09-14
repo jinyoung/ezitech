@@ -37,7 +37,6 @@ mvn spring-boot:run
 ## Test by API
 - registration
 ```
- http :8088/ 
  http :8088/projectMasters projectId="projectId" noticeProjectName="noticeProjectName" projectManager="projectManager" projectName="projectName" rfpName="rfpName" researchManager="researchManager" cashBurden="cashBurden" materialBurden="materialBurden" totalProjectCost="totalProjectCost" currentYearProjectCost="currentYearProjectCost" totalProjectDuration="totalProjectDuration" currentYearDuration="currentYearDuration" organName="organName" organBusinessNumber="organBusinessNumber" organDirector="organDirector" receiptDate="receiptDate" selectionNotification="selectionNotification" accountAllocation="accountAllocation" projectPlanFile="projectPlanFile" participationType="participationType" 
 ```
 - 집행
@@ -51,13 +50,11 @@ mvn spring-boot:run
 ```
 - budget
 ```
- http :8088/ 
- http :8088/budgets taskManagementNumber="taskManagementNumber" privateRatio="privateRatio" privateCashRatio="privateCashRatio" materialCost="materialCost" researchFacilityCost="researchFacilityCost" activityCost="activityCost" indirectCost="indirectCost" projectMasterId="projectMasterId" 
+ http :8088/budgets issueManagementNumber="issueManagementNumber" privateBurdenRate="privateBurdenRate" privateCashBurdenRate="privateCashBurdenRate" studentResearchExpenses="studentResearchExpenses" internalPersonnelExpenses="internalPersonnelExpenses" externalPersonnelExpenses="externalPersonnelExpenses" studentResearchExpenses="studentResearchExpenses" materialExpenses="materialExpenses" researchFacilityExpenses="researchFacilityExpenses" activityExpenses="activityExpenses" projectMasterId="projectMasterId" governmentSupportFunds="governmentSupportFunds" personnelExpenses="personnelExpenses" 
 ```
 - ParticipationRate
 ```
- http :8088/ 
- http :8088/researchers name="name" role="role" residentId="residentId" phoneNumber="phoneNumber" highestEducation="highestEducation" highestEducationSchool="highestEducationSchool" highestEducationMajor="highestEducationMajor" monthlySalary="monthlySalary" physicalAllowanceRate="physicalAllowanceRate" cashAllowanceRate="cashAllowanceRate" duration="duration" department="department" researcherNumber="researcherNumber" projectMasterId="projectMasterId" 
+ http :8088/inHireCosts name="name" role="role" residentRegistrationNumber="residentRegistrationNumber" phoneNumber="phoneNumber" finalEducation="finalEducation" finalEducationSchool="finalEducationSchool" finalEducationMajor="finalEducationMajor" monthlySalary="monthlySalary" physicalRatio="physicalRatio" cashRatio="cashRatio" duration="duration" department="department" nationalResearcherNumber="nationalResearcherNumber" 
 ```
 - 연구노트
 ```

@@ -110,7 +110,7 @@
             
             me.newValue = {
                 'researchNoteId': '',
-                'date': '2023-09-09',
+                'date': '2023-09-14',
                 'author': '',
                 'content': '',
                 'signature': '',

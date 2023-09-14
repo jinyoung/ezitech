@@ -36,17 +36,6 @@
                 <v-list>
                     <v-list-item
                         class="px-2"
-                        key=""
-                        to="//"
-                        @click="changeUrl()"
-                        color="primary"
-                        style="font-weight:700;"
-                    >
-                        
-                    </v-list-item>
-
-                    <v-list-item
-                        class="px-2"
                         key="projectMasters"
                         to="/registrations/projectMasters"
                         @click="changeUrl()"
@@ -94,17 +83,6 @@
 
                     <v-list-item
                         class="px-2"
-                        key=""
-                        to="//"
-                        @click="changeUrl()"
-                        color="primary"
-                        style="font-weight:700;"
-                    >
-                        
-                    </v-list-item>
-
-                    <v-list-item
-                        class="px-2"
                         key="budgets"
                         to="/budgets/budgets"
                         @click="changeUrl()"
@@ -117,24 +95,13 @@
 
                     <v-list-item
                         class="px-2"
-                        key=""
-                        to="//"
+                        key="inHireCosts"
+                        to="/participationRates/inHireCosts"
                         @click="changeUrl()"
                         color="primary"
                         style="font-weight:700;"
                     >
-                        
-                    </v-list-item>
-
-                    <v-list-item
-                        class="px-2"
-                        key="researchers"
-                        to="/participationRates/researchers"
-                        @click="changeUrl()"
-                        color="primary"
-                        style="font-weight:700;"
-                    >
-                        참여연구원
+                        인건비
                     </v-list-item>
 
 
@@ -229,13 +196,6 @@ export default {
         ImageUrl: '',
         aggregate: [
             { 
-                title: '', 
-                description: '', 
-                key: '', 
-                route: '//',
-                ImageUrl: '',
-            },
-            { 
                 title: '과제 마스터', 
                 description: '과제 마스터에 대한 설명', 
                 key: 'projectMasters', 
@@ -264,31 +224,17 @@ export default {
                 ImageUrl: '',
             },
             { 
-                title: '', 
-                description: '', 
-                key: '', 
-                route: '//',
-                ImageUrl: '',
-            },
-            { 
                 title: '예산', 
-                description: '', 
+                description: '예산에 대한 설명', 
                 key: 'budgets', 
                 route: '/budgets/budgets',
                 ImageUrl: '',
             },
             { 
-                title: '', 
-                description: '', 
-                key: '', 
-                route: '//',
-                ImageUrl: '',
-            },
-            { 
-                title: '참여연구원', 
-                description: '', 
-                key: 'researchers', 
-                route: '/participationRates/researchers',
+                title: '인건비', 
+                description: '인건비를 관리하는 모델', 
+                key: 'inHireCosts', 
+                route: '/participationRates/inHireCosts',
                 ImageUrl: '',
             },
             { 

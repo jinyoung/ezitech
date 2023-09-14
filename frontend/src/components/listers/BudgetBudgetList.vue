@@ -48,17 +48,27 @@
                             
                             
                             
+                            
+                            
+                            
+                            
+                            
                         </v-list-item-title>
 
                         <v-list-item-subtitle style="font-size:25px; font-weight:700;">
-                            [ TaskManagementNumber :  {{data.taskManagementNumber }} ] &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                            [ PrivateRatio :  {{data.privateRatio }} ] &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                            [ PrivateCashRatio :  {{data.privateCashRatio }} ] &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                            [ MaterialCost :  {{data.materialCost }} ] &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                            [ ResearchFacilityCost :  {{data.researchFacilityCost }} ] &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                            [ ActivityCost :  {{data.activityCost }} ] &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                            [ IndirectCost :  {{data.indirectCost }} ] &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                            [ IssueManagementNumber :  {{data.issueManagementNumber }} ] &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                            [ PrivateBurdenRate :  {{data.privateBurdenRate }} ] &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                            [ PrivateCashBurdenRate :  {{data.privateCashBurdenRate }} ] &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                            [ StudentResearchExpenses :  {{data.studentResearchExpenses }} ] &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                            [ InternalPersonnelExpenses :  {{data.internalPersonnelExpenses }} ] &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                            [ ExternalPersonnelExpenses :  {{data.externalPersonnelExpenses }} ] &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                            [ StudentResearchExpenses :  {{data.studentResearchExpenses }} ] &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                            [ MaterialExpenses :  {{data.materialExpenses }} ] &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                            [ ResearchFacilityExpenses :  {{data.researchFacilityExpenses }} ] &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                            [ ActivityExpenses :  {{data.activityExpenses }} ] &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
                             [ ProjectMasterId :  {{data.projectMasterId }} ] &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                            [ GovernmentSupportFunds :  {{data.governmentSupportFunds }} ] &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                            [ PersonnelExpenses :  {{data.personnelExpenses }} ] &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
                         </v-list-item-subtitle>
 
                     </v-list-item-content>
@@ -126,14 +136,19 @@
             this.values = temp.data._embedded.budgets;
             
             this.newValue = {
-                'taskManagementNumber': '',
-                'privateRatio': 0,
-                'privateCashRatio': 0,
-                'materialCost': '',
-                'researchFacilityCost': '',
-                'activityCost': '',
-                'indirectCost': '',
+                'issueManagementNumber': '',
+                'privateBurdenRate': 0,
+                'privateCashBurdenRate': 0,
+                'studentResearchExpenses': {},
+                'internalPersonnelExpenses': {},
+                'externalPersonnelExpenses': {},
+                'studentResearchExpenses': {},
+                'materialExpenses': '',
+                'researchFacilityExpenses': '',
+                'activityExpenses': '',
                 'projectMasterId': {},
+                'governmentSupportFunds': {},
+                'personnelExpenses': {},
             }
         },
         methods: {

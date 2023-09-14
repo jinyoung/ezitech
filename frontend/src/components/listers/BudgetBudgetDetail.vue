@@ -6,19 +6,24 @@
 
         <v-card-text>
             <div>
-                <String label="TaskManagementNumber" v-model="item.taskManagementNumber" :editMode="editMode" @change="change" />
+                <String label="IssueManagementNumber" v-model="item.issueManagementNumber" :editMode="editMode" @change="change" />
             </div>
             <div>
-                <Number label="PrivateRatio" v-model="item.privateRatio" :editMode="editMode" @change="change" />
+                <Number label="PrivateBurdenRate" v-model="item.privateBurdenRate" :editMode="editMode" @change="change" />
             </div>
             <div>
-                <Number label="PrivateCashRatio" v-model="item.privateCashRatio" :editMode="editMode" @change="change" />
+                <Number label="PrivateCashBurdenRate" v-model="item.privateCashBurdenRate" :editMode="editMode" @change="change" />
             </div>
-            <BigDecimal offline label="MaterialCost" v-model="item.materialCost" :editMode="false" :key="false" @change="change" />
-            <BigDecimal offline label="ResearchFacilityCost" v-model="item.researchFacilityCost" :editMode="false" :key="false" @change="change" />
-            <BigDecimal offline label="ActivityCost" v-model="item.activityCost" :editMode="false" :key="false" @change="change" />
-            <BigDecimal offline label="IndirectCost" v-model="item.indirectCost" :editMode="false" :key="false" @change="change" />
+            <Money offline label="StudentResearchExpenses" v-model="item.studentResearchExpenses" :editMode="false" @change="change" />
+            <Money offline label="InternalPersonnelExpenses" v-model="item.internalPersonnelExpenses" :editMode="false" @change="change" />
+            <Money offline label="ExternalPersonnelExpenses" v-model="item.externalPersonnelExpenses" :editMode="false" @change="change" />
+            <Money offline label="StudentResearchExpenses" v-model="item.studentResearchExpenses" :editMode="false" @change="change" />
+            <MaterialExpenses offline label="MaterialExpenses" v-model="item.materialExpenses" :editMode="false" :key="false" @change="change" />
+            <ResearchFacilityExpenses offline label="ResearchFacilityExpenses" v-model="item.researchFacilityExpenses" :editMode="false" :key="false" @change="change" />
+            <ActivityExpenses offline label="ActivityExpenses" v-model="item.activityExpenses" :editMode="false" :key="false" @change="change" />
             <ProjectMasterId offline label="ProjectMasterId" v-model="item.projectMasterId" :editMode="false" :key="false" @change="change" />
+            <Money offline label="GovernmentSupportFunds" v-model="item.governmentSupportFunds" :editMode="false" @change="change" />
+            <Money offline label="PersonnelExpenses" v-model="item.personnelExpenses" :editMode="false" @change="change" />
         </v-card-text>
 
         <v-card-actions>

@@ -1,10 +1,11 @@
 package ezitech.domain;
 
+import ezitech.domain.ExpenseResolutionCreated;
 import ezitech.집행Application;
+import jakarta.persistence.*;
 import java.time.LocalDate;
 import java.util.Date;
 import java.util.List;
-import javax.persistence.*;
 import lombok.Data;
 
 @Entity
@@ -39,6 +40,17 @@ public class ExpenseResolution {
     private String approvalStatus;
 
     private String approvalLine;
+
+    @PostPersist
+    public void onPostPersist() {
+        ExpenseResolutionCreated expenseResolutionCreated = new ExpenseResolutionCreated(
+            this
+        );
+        expenseResolutionCreated.publishAfterCommit();
+    }
+
+    @PrePersist
+    public void onPrePersist() {}
 
     public static ExpenseResolutionRepository repository() {
         ExpenseResolutionRepository expenseResolutionRepository = 집행Application.applicationContext.getBean(
